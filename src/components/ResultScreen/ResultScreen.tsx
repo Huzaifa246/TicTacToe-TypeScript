@@ -19,14 +19,14 @@ const RH1 = styled.h1`
 `
 
 interface Props {
-    resetGame: TTT;
-    winner: React.Dispatch<React.SetStateAction<string | null[] | typeof EMPTY | typeof TICK | typeof CROSS>>;
-    setWinner: React.SetStateAction<string | null>
+    resetGame: () => void;
+    winner: string | null; 
+    setWinner?: React.SetStateAction<string | null>
 }
 
 // function ResultScreen: React.FunctionComponent<Props> = ({ props, winner, resetGame }) => {
 
-const ResultScreen = ({ winner, resetGame }: Props) => {
+const ResultScreen: React.FC<Props> = ({ winner, resetGame }) => {
 
 
     return (
